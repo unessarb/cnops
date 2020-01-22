@@ -1,0 +1,170 @@
+categorie:
+  header: 'Category management'
+  btn_add: 'New category'
+  action: 'Actions'
+  creation: "Category Creation"
+  modification: "Edit Category"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+commune:
+  header: 'Towns management'
+  btn_add: 'New town'
+  action: 'Actions'
+  creation: "Town creation"
+  modification: "Edit town"
+  btn_save: "Save"
+  btn_update: "Edit"
+  province: "Provinces"
+  test: 'designationfr'
+
+
+province:
+  header: 'Provinces management'
+  btn_add: 'New Province'
+  action: 'Actions'
+  creation: "Creation of a province"
+  modification: "Edit province"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+operateur:
+  header: 'Operators management'
+  btn_add: 'New operator'
+  action: 'Actions'
+  creation: "Creation of an operator"
+  modification: "Edit operator"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+professionnel:
+  header: 'Professional management'
+  btn_add: 'New Professional'
+  action: 'Actions'
+  creation: "Creation of a professional"
+  modification: "Edit un professionnel"
+  btn_save: "Save"
+  btn_update: "Edit"
+  operateur: "Operator"
+
+unite:
+  header: 'Management of packaging units'
+  btn_add: 'New unit'
+  action: 'Actions'
+  creation: "Creation of a unit"
+  modification: "Edit unit"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+souk:
+  header: 'Souks management'
+  btn_add: 'New souk'
+  action: 'Actions'
+  creation: "Creation of a souk"
+  modification: "Edit souk"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+variete:
+  header: 'Variety management'
+  btn_add: 'New variety'
+  action: 'Actions'
+  signe: 'Signs of quality'
+  creation: "Variety creation"
+  modification: "Edit  variety"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+default:
+  header: 'User Management'
+  btn_add: 'New user'
+  login: 'last connection'
+  role: 'Role'
+  etat: 'State'
+  souk: 'Souk'
+  variete: 'Variety'
+  semaine: 'Week'
+  prix: 'Price'
+  email: 'Email'
+  username: 'Username'
+  image: 'Picture'
+  nom: 'Last Name'
+  prenom: 'First Name'
+  active: 'Activate'
+  block: 'Block'
+  admin: 'Administrator'
+  acheteur: 'Buyer'
+  offreur: 'Supplier'
+  action: 'Actions'
+  creation: "Creation of a user"
+  modification: "Edit user"
+  btn_save: "Save"
+  btn_update: "Edit"
+  designation: "Designation"
+  province: "Province"
+  document: "Document"
+  untie: "Unit"
+  categorie: "Categorie"
+
+register:
+  email: 'Email *'
+  username: 'Username *'
+  nom: 'Last name *'
+  prenom: 'First name *'
+  password: 'Password *'
+  password_confirmation: 'Repeat password *'
+  role: 'Your are'
+  acheteur: 'Buyer'
+  offreur: 'Suplier'
+  phone: 'Phone *'
+  phone2: 'Phone'
+  adresse: 'Adresse *'
+  adresse2: 'Adresse'
+
+
+trace:
+  header: 'Traceability'
+  action: 'Action'
+  user: 'User'
+  description: 'Description'
+
+bourse:
+  header: 'Date prices and markets'
+  btn_add: 'New price'
+  action: 'Actions'
+  creation: "New prix"
+  modification: "Edit"
+  btn_save: "Save"
+  btn_update: "Edit"
+
+document:
+  header: 'Documents management'
+  btn_add: 'New document'
+  action: 'Actions'
+  creation: "Creation of a document"
+  modification: "Edit document"
+  btn_save: "Save"
+  btn_update: "Edit"
+  titre: "Title"
+  description: "Description"
+  type: "Type"
+  date: "Creation date"
+  document: "Document"
+  open: "Open"
+
+actualite:
+  header: 'News management'
+  btn_add: 'Add news'
+  action: 'Actions'
+  creation: "Creation of a news"
+  modification: "Edit news"
+  btn_save: "Save"
+  btn_update: "Edit"
+  titre: "Title"
+  description: "Description"
+  type: "Type"
+  date: "Creation date"
+  actualite: "Picture"
+  open: "Open"
+  detail2: 'Detail'
+  detail: 'Read more'

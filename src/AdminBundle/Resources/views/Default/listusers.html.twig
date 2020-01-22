@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block header_title %}
+    {{ 'default.header'|trans }}
+{% endblock %}
+
+{% block main_content %}
+
+
+    <section class="dashboard-counts no-padding-bottom">
+        <div class="container-fluid">
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <div class="row bg-white has-shadow">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-primary" href="{{ path('ajouter_user') }}"><i class="fa fa-plus-circle"></i>&ensp;{{ 'default.btn_add'|trans }}</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-1">
+                                    <thead>
+                                    <tr>
+
+                                        <th>{{ 'default.etat'|trans }}</th>
+                                        <th>{{ 'default.image'|trans }}</th>
+                                        <th>{{ 'default.username'|trans }}</th>
+                                        <th>{{ 'default.role'|trans }}</th>
+                                        <th>{{ 'default.login'|trans }}</th>
+                                        <th>{{ 'default.action'|trans }}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for user in users %}
+                                        <tr>
+                                            <td>
+                                                {% if user.enabled == 1 %}
+                                                    <span class="badge badge-pill badge-success">{{ 'default.active'|trans }}</span>
+                                                {% else %}
+                                                    <span class="badge badge-pill badge-danger">{{ 'default.block'|trans }}</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if user.image %}
+                                                    <img class="rounded-circle" src="{{ asset("assets/files/images/" ~ user.image) }}" width="50" height="50">
+                                                {% else %}
+                                                    <img src="{{ asset("assets/dist/img/avatar/avatar.png") }}" class="rounded-circle" width="50" height="50">
+                                                {% endif %}
+                                            </td>
+                                            <td>{{ user.username }}</td>
+                                            <td>
+                                                {% if user.role == 1 %}
+                                                    {{ 'default.admin'|trans }}
+                                                {% elseif user.role == 2 %}
+                                                    {{ 'default.acheteur'|trans }}
+                                                {% else %}
+                                                    {{ 'default.offreur'|trans }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                {% if user.lastLogin is null %}
+                                                    N/A
+                                                {% else %}
+                                                    {{ user.lastLogin|date('d/m/Y à H:i:s') }}
+                                                {% endif %}
+                                            </td>
+                                            <td>
+                                                <a href="{{ path('edit_user', { 'id': user.id }) }}" data-toggle="tooltip" title="Modifier" class="btn btn-icon btn-primary"><i class="fa fa-edit"></i></a>
+                                                <a href="{{ path('remove_user', { 'id': user.id }) }}" data-toggle="tooltip" title="Supprimer" class="btn btn-icon btn-danger"><i class="fa fa-times"></i></a>
+
+                                                {% if user.enabled == 1 %}
+                                                    <a href="{{ path('blocker_user', { 'id': user.id }) }}" data-toggle="tooltip" title="{{ 'default.block'|trans }}" class="btn btn-icon btn-danger"><i class="fa fa-ban"></i></a>
+                                                {% else %}
+                                                    <a href="{{ path('activer_user', { 'id': user.id }) }}" data-toggle="tooltip" title="{{ 'default.active'|trans }}" class="btn btn-icon btn-success"><i class="fa fa-check"></i></a>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+
+        window.onload = function() {
+            $("li").removeClass("active");
+            $( "#GU" ).addClass( "active" );
+            $( "#GUL" ).addClass( "active" );
+        };
+
+    </script>
+
+{% endblock %}

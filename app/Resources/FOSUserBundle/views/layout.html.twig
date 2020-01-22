@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>{% block title %}Dattes{% endblock %}</title>
+    {% block stylesheets %}
+        <!-- Bootstrap CSS-->
+        <link href="{{ asset("assets/dist/modules/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
+        <!-- General CSS Files -->
+        <link href="{{ asset("assets/dist/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet"/>
+        <link href="{{ asset("assets/dist/modules/weather-icon/css/weather-icons.min.css") }}" rel="stylesheet"/>
+        <link href="{{ asset("assets/dist/modules/weather-icon/css/weather-icons-wind.min.css") }}" rel="stylesheet"/>
+        <!-- Google fonts - Poppins -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+
+        <!-- CSS Libraries -->
+
+        <link href="{{ asset("assets/dist/modules/datatables/datatables.min.css") }}" rel="stylesheet"/>
+        <link href="{{ asset("assets/dist/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css") }}"
+              rel="stylesheet"/>
+        <link href="{{ asset("assets/dist/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css") }}"
+              rel="stylesheet"/>
+
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="{{ asset("assets/dist/css/style.default.css") }}" id="theme-stylesheet">
+
+        {% if  app.request.getLocale() == 'ar' %}
+            <link rel="stylesheet" href="{{ asset("assets/dist/modules/bootstrap/css/bootstrap-rtl.css") }}">
+        {% endif %}
+        <!-- Custom stylesheet - for your changes-->
+        <link rel="stylesheet" href="{{ asset("assets/dist/css/custom.css") }}">
+
+
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+</head>
+<body>
+<div class="page login-page">
+
+    {% if app.request.hasPreviousSession %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <div class="alert alert-{{ type }}  alert-dismissible">
+                            {{ message }}
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    <div class="container d-flex align-items-center">
+        <div class="form-holder">
+            <div class="row">
+                <!-- Logo & Information Panel-->
+                <div class="col-lg-6">
+                    <div class="info d-flex align-items-center">
+                        <div class="content">
+                            <div class="logo">
+                                <h1>CNOPS</h1>
+                            </div>
+                            <p>Petite description ici</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form Panel    -->
+                <div class="col-lg-6 bg-white">
+                    <div class="form d-flex align-items-center">
+                        <div class="content">
+                            {% block fos_user_content %}
+                            {% endblock fos_user_content %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{% block javascripts %}
+    <!-- General JS Scripts -->
+
+
+    <script src="{{ asset("assets/dist/modules/jquery/jquery.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/popper.js/umd/popper.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/jquery.cookie/jquery.cookie.js") }}"></script>
+    <!-- JS Libraies -->
+
+    <!-- Template JS File -->
+    <script>
+    $(".alert").fadeTo(9000, 500).slideUp(500, function(){
+        $(".alert").slideUp(500);
+    });
+    </script>
+
+
+{% endblock %}
+
+</body>
+</html>

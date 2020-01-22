@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block header_title %}
+    Tableau de bord
+{% endblock %}
+
+{% block main_content %}
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+
+        window.onload = function() {
+            $("li").removeClass("active");
+            $( "#TB" ).addClass( "active" );
+        };
+
+    </script>
+
+
+{% endblock %}

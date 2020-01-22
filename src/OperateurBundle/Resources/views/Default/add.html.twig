@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block header_title %}
+    Nouveau inventaire
+{% endblock %}
+
+{% block main_content %}
+
+
+    <section class="dashboard-counts no-padding-bottom">
+        {% for message in app.flashes('message') %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="container-fluid">
+            <div class="bg-white has-shadow">
+
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+
+                <div class="row">
+                    <div class="col-6">
+                        {{ form_label (form.numero) }}
+                        {{ form_widget(form.numero) }}
+                        {{ form_errors(form.numero) }}
+                    </div>
+                    <div class="col-6">
+                        {{ form_label (form.etat) }}
+                        {{ form_widget(form.etat, {'attr' : {'class' : 'uniteclass span3'}}) }}
+                        {{ form_errors(form.etat) }}
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6">
+
+                        {{ form_label (form.nbrPiece) }}
+                        {{ form_widget(form.nbrPiece, {'attr' : {'class' : 'categorieclass span3'}}) }}
+                        {{ form_errors(form.nbrPiece) }}
+                    </div>
+
+                    <div class="col-6">
+
+                        {{ form_label (form.nbrPage) }}
+                        {{ form_widget(form.nbrPage, {'attr' : {'class' : 'varieteclass span3'}}) }}
+                        {{ form_errors(form.nbrPage) }}
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input id="btn" type="submit" class="btn btn-primary" value="Enregistrer"/>
+
+                    </div>
+                </div>
+
+
+                {{ form_end(form) }}
+
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+
+        window.onload = function () {
+            $("li").removeClass("active");
+            $("#NI").addClass("active");
+        };
+
+
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>{% block title %}Dattes{% endblock %}</title>
+    {% block stylesheets %}
+        <!-- Bootstrap CSS-->
+        <link href="{{ asset("assets/dist/modules/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
+        <!-- General CSS Files -->
+        <link href="{{ asset("assets/dist/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet" />
+        <link href="{{ asset("assets/dist/modules/weather-icon/css/weather-icons.min.css") }}" rel="stylesheet" />
+        <link href="{{ asset("assets/dist/modules/weather-icon/css/weather-icons-wind.min.css") }}" rel="stylesheet" />
+        <!-- Google fonts - Poppins -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+
+        <!-- CSS Libraries -->
+
+        <link href="{{ asset("assets/dist/modules/datatables/datatables.min.css") }}" rel="stylesheet" />
+        <link href="{{ asset("assets/dist/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css") }}" rel="stylesheet" />
+        <link href="{{ asset("assets/dist/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css") }}" rel="stylesheet" />
+
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="{{ asset("assets/dist/css/style.default.css") }}" id="theme-stylesheet">
+
+        {% if  app.request.getLocale() == 'ar' %}
+        <link rel="stylesheet" href="{{ asset("assets/dist/modules/bootstrap/css/bootstrap-rtl.css") }}">
+        {% endif %}
+        <!-- Custom stylesheet - for your changes-->
+        <link rel="stylesheet" href="{{ asset("assets/dist/css/custom.css") }}">
+
+
+
+
+
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body style="{{ app.request.getLocale() == 'ar' ? "font-family: 'Cairo', sans-serif;" : '' }}">
+
+
+<div class="page">
+
+
+    {% include 'partial/header.html.twig' %}
+    <div class="page-content d-flex align-items-stretch">
+        {% include 'partial/sidebare.html.twig' %}
+        <div class="content-inner">
+            <header class="page-header">
+                <div class="container-fluid">
+                    <h2 class="no-margin-bottom">
+                        {% block header_title %}
+                        {% endblock %}
+                    </h2>
+                </div>
+            </header>
+            {% block main_content %}
+            {% endblock %}
+            <footer class="main-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Enabel &copy; 2019</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <!--<p>Design by <a href="https://bootstrapious.com/p/admin-template" class="external">Bootstrapious</a></p>-->
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+</div>
+
+
+{% block javascripts %}
+    <!-- General JS Scripts -->
+
+
+    <script src="{{ asset("assets/dist/modules/jquery/jquery.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/popper.js/umd/popper.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/jquery.cookie/jquery.cookie.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/chart.js/Chart.min.js") }}"></script>
+    <!-- JS Libraies -->
+    <script src="{{ asset("assets/dist/modules/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/jquery-ui/jquery-ui.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/js/front.js") }}"></script>
+    <!-- Template JS File -->
+    <script src="{{ asset("assets/dist/js/page/modules-datatables.js") }}"></script>
+
+    <script src="{{ asset("assets/dist/js/scripts.js") }}"></script>
+    <script src="{{ asset("assets/dist/js/custom.js") }}"></script>
+
+    <script>
+        $("#table-1").dataTable({
+        {% if app.request.getLocale() == 'ar' %}
+            "language": {
+                "url": "{{ asset("assets/dist/json/Arabic.json") }}"
+            },
+        {% endif %}
+
+            "columnDefs": [
+                { "sortable": true }
+            ]
+        });
+
+        $(".alert").fadeTo(9000, 500).slideUp(500, function(){
+            $(".alert").slideUp(500);
+        });
+    </script>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,171 @@
+categorie:
+  header: 'Gestion des catégories'
+  btn_add: 'Nouvelle catégorie'
+  action: 'Actions'
+  creation: "Création d'une catégorie"
+  modification: "Modifier une catégorie"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+commune:
+  header: 'Gestion des communes'
+  btn_add: 'Nouvelle commune'
+  action: 'Actions'
+  creation: "Création d'une commune"
+  modification: "Modifier une commune"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+  province: "Provinces"
+  test: 'designationfr'
+
+
+province:
+  header: 'Gestion des provinces'
+  btn_add: 'Nouvelle province'
+  action: 'Actions'
+  creation: "Création d'une province"
+  modification: "Modifier une province"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+operateur:
+  header: 'Gestion des opérateurs'
+  btn_add: 'Nouveau opérateur'
+  action: 'Actions'
+  creation: "Création d'un opérateur"
+  modification: "Modifier un opérateur"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+professionnel:
+  header: 'Gestion des professionnels'
+  btn_add: 'Nouveau professionnel'
+  action: 'Actions'
+  creation: "Création d'un professionnel"
+  modification: "Modifier un professionnel"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+  operateur: "Opérateur"
+
+unite:
+  header: 'Gestion des unités de conditionnements'
+  btn_add: 'Nouvelle unité'
+  action: 'Actions'
+  creation: "Création d'une unité"
+  modification: "Modifier une unité"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+souk:
+  header: 'Gestion des souks'
+  btn_add: 'Nouveau souk'
+  action: 'Actions'
+  creation: "Création d'un souk"
+  modification: "Modifier un souk"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+variete:
+  header: 'Gestion des variétés'
+  btn_add: 'Nouvelle variété'
+  action: 'Actions'
+  signe: 'Signes de qualité'
+  creation: "Création d'une variété"
+  modification: "Modifier une variété"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+default:
+  header: 'Gestion des utilisateurs'
+  btn_add: 'Nouvel utilisateur'
+  login: 'Dernière connexion'
+  role: 'Rôle'
+  etat: 'Etat'
+  souk: 'Souk'
+  variete: 'Varieté'
+  semaine: 'Semaine'
+  prix: 'Prix'
+  email: 'Email'
+  username: 'Identifiant'
+  image: 'Image'
+  nom: 'Nom'
+  prenom: 'Prénom'
+  adresse: 'Prénom'
+  active: 'Activer'
+  block: 'Bloquer'
+  admin: 'Administrateur'
+  acheteur: 'Acheteur'
+  offreur: 'Offreur'
+  action: 'Actions'
+  creation: "Création d'un utilisateur"
+  modification: "Modifier une utilisateur"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+  designation: "Designation"
+  province: "Province"
+  document: "Document"
+  untie: "Unité"
+  categorie: "Catégorie"
+
+register:
+  email: 'Email *'
+  username: 'Identifiant *'
+  nom: 'Nom *'
+  prenom: 'Prénom *'
+  phone: 'Téléphone *'
+  phone2: 'Téléphone'
+  adresse: 'Adresse *'
+  adresse2: 'Adresse'
+  password: 'Mot de passe *'
+  password_confirmation: 'Répéter le mot de passe *'
+  role: 'Vous êtes'
+  acheteur: 'Acheteur'
+  offreur: 'Offreur'
+
+trace:
+  header: 'Traceabilités'
+  action: 'Action'
+  user: 'Utilisateur'
+  description: 'Description'
+
+
+bourse:
+  header: 'Prix et marchés des dattes'
+  btn_add: 'Nouveau prix'
+  action: 'Actions'
+  creation: "Nouveau prix"
+  modification: "Modification"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+
+document:
+  header: 'Gestion des documents'
+  btn_add: 'Nouveau document'
+  action: 'Actions'
+  creation: "Création d'un document"
+  modification: "Modifier un document"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+  titre: "Titre"
+  description: "Description"
+  type: "Type"
+  date: "Date de création"
+  document: "Document"
+  open: "Ouvrir"
+
+actualite:
+  header: 'Gestion des actualités'
+  btn_add: 'Nouvelle actualité'
+  action: 'Actions'
+  creation: "Création d'une actualité"
+  modification: "Modifier une actualité"
+  btn_save: "Enregistrer"
+  btn_update: "Modifier"
+  titre: "Titre"
+  description: "Description"
+  type: "Type"
+  date: "Date de création"
+  actualite: "image"
+  open: "Ouvrir"
+  detail2: 'Détail'
+  detail: 'Lire la suite'

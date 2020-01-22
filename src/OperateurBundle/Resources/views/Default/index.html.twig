@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block header_title %}
+    Mes inventaires
+{% endblock %}
+
+{% block main_content %}
+
+    <section class="dashboard-counts no-padding-bottom">
+        <div class="container-fluid">
+            {% for message in app.flashes('message') %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <div class="row bg-white has-shadow">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-primary" href="{{ path('ajouter_inventaire') }}"><i
+                                        class="fa fa-plus-circle"></i>&ensp;Nouveau inventaire</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-1">
+                                    <thead>
+                                    <tr>
+
+                                        <th>N° Dossier</th>
+                                        <th>Etat du dossier</th>
+                                        <th>Nbre de pièce</th>
+                                        <th>Nbre de page</th>
+                                        <th>
+                                            Date de création
+                                        </th>
+                                        <th>Statut</th>
+
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for inventaire in inventaires %}
+                                        <tr>
+
+                                            <td>{{ inventaire.numero }}</td>
+                                            <td>{{ inventaire.etat }}</td>
+                                            <td>{{ inventaire.nbrPiece }}</td>
+                                            <td>{{ inventaire.nbrPage }}</td>
+                                            <td>{{ inventaire.created | date }}</td>
+
+                                            <td>
+                                                {{ inventaire.statut ?
+                                                ('<div class="badge badge-rounded bg-green">active      </div>')
+                                                :
+                                                '<div class="badge badge-rounded bg-orange">en attente      </div>'
+                                                }}
+                                            </td>
+
+
+                                            <td>
+                                                <a href="{{ path('edit_inventaire', { 'id': inventaire.id }) }}"
+                                                   data-toggle="tooltip" title="Modifier"
+                                                   class="btn btn-icon btn-primary"><i class="fa fa-edit"></i></a>
+                                                <a href="{{ path('supprimer_inventaire', { 'id': inventaire.id }) }}"
+                                                   data-toggle="tooltip" title="Supprimer"
+                                                   class="btn btn-icon btn-danger"><i class="fa fa-times"></i></a>
+
+
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+
+        window.onload = function () {
+            $("li").removeClass("active");
+            $("#MI").addClass("active");
+        };
+
+    </script>
+
+{% endblock %}

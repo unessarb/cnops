@@ -1,0 +1,62 @@
+
+
+<nav class="side-navbar">
+    <!-- Sidebar Header-->
+    <div class="sidebar-header d-flex align-items-center">
+        <div class="avatar">
+            {% if(app.user.image) %}
+                <img src="{{ asset("assets/files/images/" ~ app.user.image) }}" class="img-fluid rounded-circle">
+            {% else %}
+                <img src="{{ asset("assets/dist/img/avatar/avatar.png") }}" class="img-fluid rounded-circle">
+            {% endif %}
+        </div>
+        <div class="title">
+            <h1 class="h4">{{ app.user.nom }} {{ app.user.prenom }} </h1>
+            <p>
+            {% if(app.user.role == 3) %}
+
+                Opérateur
+
+             {% elseif(app.user.role == 2) %}
+
+                Controleur
+            {% else %}
+             Administrateur
+
+              {% endif %}
+            </p>
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li id="TB"><a  href="{{ path('homepage') }}"><i class="fa fa-fire"></i> <span>{{ 'dashboard'|trans({}, 'sidebar')}} </span></a></li>
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <li class="dropdown" id="GU">
+                <a  href="#users" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-users"></i> <span>{{ 'users'|trans({}, 'sidebar')}} </span></a>
+                <ul  id="users" class="collapse list-unstyled ">
+                    <li id="GUL"><a class="nav-link" href="{{ path('list_users') }}">{{ 'liste'|trans({}, 'sidebar')}} </a></li>
+                    <li id="GUA"><a class="nav-link" href="{{ path('ajouter_user') }}">{{ 'add'|trans({}, 'sidebar')}} </a></li>
+                </ul>
+            </li>
+
+
+        {% endif %}
+        {% if is_granted('ROLE_OPERATEUR') %}
+
+            <li id="MI"><a class="nav-link" href="{{ path('mes_inventaire') }}"><i class="fa fa-inbox"></i> <span>Mes inventaires</span></a></li>
+            <li id="NI"><a class="nav-link" href="{{ path('ajouter_inventaire') }}"><i class="fa fa-plus"></i> <span>Nouveau inventaire</span></a></li>
+
+
+        {% endif %}
+
+        {% if is_granted('ROLE_CONTROLEUR') %}
+
+            <li id="MD"><a class="nav-link" href="#"><i class="fa fa-inbox"></i> <span>{{ 'demandes'|trans({}, 'sidebar')}}</span></a></li>
+
+
+        {% endif %}
+        <li id="MD"><a class="nav-link" href="{{ path('fos_user_change_password') }}"><i class="fa fa-square-o"></i> <span>{{ 'passwordchange'|trans({}, 'sidebar')}}</span></a></li>
+
+
+    </ul>
+</nav>

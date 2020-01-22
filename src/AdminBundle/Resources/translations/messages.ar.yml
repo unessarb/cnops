@@ -1,0 +1,173 @@
+categorie:
+  header: 'إدارة الفئات'
+  btn_add: 'فئة جديدة'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء فئة'
+  modification: 'تعديل فئة'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+
+commune:
+  header: 'إدارة البلديات'
+  btn_add: 'بلدية جديدة'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء بلدية'
+  modification: 'تعديل بلدية'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+  province: 'المحافظات'
+  test: 'designationar'
+
+province:
+  header: 'إدارة المحافظات' 
+  btn_add: 'محافظة جديدة'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء محافظة'
+  modification: 'تعديل محافظة'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+
+operateur:
+  header: 'إدارة المشغلين'
+  btn_add: 'مشغل جديد'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء مشغل'
+  modification: 'تعديل مشغل'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+  
+professionnel:
+  header: 'إدارة المهنيين'
+  btn_add: 'مهني جديد'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء مهني'
+  modification: 'تعديل مهني'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+  operateur: "مشغل"
+
+unite:
+  header: 'إدارة وحدات التعبئة والتغليف'
+  btn_add: 'وحدة جديدة'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء وحدة'
+  modification: 'تعديل وحدة'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+
+souk:
+  header: 'إدارة الأسواق'
+  btn_add: 'سوق جديد'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء سوق'
+  modification: 'تعديل سوق'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+
+variete:
+  header: 'إدارة الأنواع'
+  btn_add: 'نوع جديد'
+  action: 'الإجراءات التصحيحية'
+  signe: 'علامات الجودة'
+  creation: 'إنشاء نوع'
+  modification: 'تعديل نوع'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+
+bourse:
+  header: 'أسعار وأسواق التمور'
+  btn_add: 'سعر جديد'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء سعر'
+  modification: 'تعديل سعر'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+
+document:
+  header: 'إدارة الوثائق'
+  btn_add: 'وثيقة جديدة'
+  action: 'الإجراءات التصحيحية'
+  creation: 'إنشاء وثيقة'
+  modification: 'تعديل وثيقة'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+  titre: "العنوان"
+  description: "الوصف"
+  type: "النوع"
+  date: "تاريخ الإنشاء"
+  document: "الوثيقة"
+  open: "افتح"
+
+actualite:
+  header: 'إدارة الأخبار'
+  btn_add: 'خبر جديد'
+  action: 'الإجراءات التصحيحية'
+  creation: 'خبر جديد'
+  modification: 'تعديل خبر جديد'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+  titre: "العنوان"
+  description: "الوصف"
+  type: "النوع"
+  date: "تاريخ الإنشاء"
+  actualite: "الصورة"
+  open: "افتح"
+  detail2: 'التفاصيل'
+  detail: 'اقرأ المزيد'
+
+
+
+default:
+  header: 'إدارة المستخدمين'
+  btn_add: 'مستخدم جديد'
+  action: 'الإجراءات التصحيحية'
+  login: 'آخر تسجيل دخول'
+  role: 'الدور'
+  etat: 'الحالة'
+  email: 'البريد الالكتروني'
+  username: 'اسم المستخدم'
+  image: 'الصورة'
+  nom: 'النسب'
+  prenom: 'الاسم'
+  active: 'مفعل'
+  block: 'غير مفعل'
+  activer: 'تفعيل'
+  blocker: 'ايقاف التفعيل'
+  admin: 'مدير'
+  acheteur: 'مشتري'
+  offreur: 'معلن'
+  creation: 'إنشاء مستخدم'
+  modification: 'تعديل مستخدم'
+  btn_save: "سجل"
+  btn_update: "تعديل"
+  souk: 'السوق'
+  variete: 'النوع'
+  semaine: 'الأسبوع'
+  prix: 'الثمن'
+  action: 'الإجراءات التصحيحية'
+  designation: "الاسم"
+  province: "المحافظة"
+  document: "الوثيقة"
+  untie: "الوحدة"
+  categorie: "الفئة"
+
+register:
+  email: 'البريد الالكتروني *'
+  username: 'اسم المستخدم *'
+  nom: 'النسب *'
+  prenom: 'الاسم *'
+  password: 'كلمة السر *'
+  password_confirmation: 'كرر كلمة المرور *'
+  role: 'أنتم'
+  acheteur: 'مشتري'
+  offreur: 'معلن'
+  phone: 'الهاتف *'
+  phone2: 'الهاتف'
+  adresse: 'العنوان *'
+  adresse2: 'العنوان'
+
+trace:
+  header: 'التتبع'
+  action: 'الإجراء'
+  user: 'المستخدم'
+  description: 'الوصف'

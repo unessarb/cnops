@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block header_title %}
+    {{ 'default.modification'|trans }}
+{% endblock %}
+
+{% block main_content %}
+
+
+    <section class="dashboard-counts no-padding-bottom">
+        {% for message in app.flashes('message') %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="container-fluid">
+            <div class="row bg-white has-shadow">
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            {{ form_start(form) }}
+                            {{ form_widget(form) }}
+                            <input id="btn" type="submit" class="btn btn-primary" value="{{ 'default.btn_update'|trans }}" />
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+
+        window.onload = function() {
+            $("li").removeClass("active");
+            $( "#GU" ).addClass( "active" );
+            $( "#GUL" ).addClass( "active" );
+        };
+
+    </script>
+
+{% endblock %}

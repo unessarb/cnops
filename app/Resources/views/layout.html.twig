@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>{% block title %}Bourse des Dattes{% endblock %}</title>
+    {% block stylesheets %}
+
+        <link href="http://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+        <link href="{{ asset("assets/libraries/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet">
+        <link href="{{ asset("assets/libraries/owl.carousel/assets/owl.carousel.css") }}" rel="stylesheet">
+        <link href="{{ asset("assets/libraries/colorbox/example1/colorbox.css") }}" rel="stylesheet">
+        <link href="{{ asset("assets/libraries/bootstrap-select/bootstrap-select.min.css") }}" rel="stylesheet">
+        <link href="{{ asset("assets/libraries/bootstrap-fileinput/fileinput.min.css") }}" rel="stylesheet">
+        <link href="{{ asset("assets/dist/modules/datatables/datatables.min.css") }}" rel="stylesheet" />
+        <link href="{{ asset("assets/dist/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css") }}" rel="stylesheet" />
+
+        <link href="{{ asset("assets/css/superlist.css") }}" rel="stylesheet">
+        {% if  app.request.getLocale() == 'ar' %}
+
+            <link rel="stylesheet" href="{{ asset("assets/css/bootstrap-rtl.css") }}">
+
+        {% else %}
+            <style>
+
+                .header-nav-primary.nav > li > a {
+                    padding: 20px 9px;
+                    padding-top: 20px;
+                    padding-right: 9px;
+                    padding-bottom: 20px;
+                    padding-left: 9px;
+                    font-size: 12px;
+                }
+            </style>
+        {% endif %}
+
+    {% endblock %}
+
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body class="" style="{{ app.request.getLocale() == 'ar' ? "font-family: 'Cairo', sans-serif;" : '' }}">
+
+<div class="page-wrapper">
+
+    {% block main_content %}
+    {% endblock %}
+
+</div><!-- /.page-wrapper -->
+{% block javascripts %}
+
+    <script src="{{ asset("assets/js/jquery.js") }}"></script>
+    <script src="{{ asset("assets/js/map.js") }}"></script>
+
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/collapse.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/carousel.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/transition.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/dropdown.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/tooltip.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/tab.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-sass/javascripts/bootstrap/alert.js") }}"></script>
+
+    <script src="{{ asset("assets/libraries/colorbox/jquery.colorbox-min.js") }}"></script>
+
+    <script src="{{ asset("assets/libraries/flot/jquery.flot.min.js") }}"></script>
+    <script src="{{ asset("assets/libraries/flot/jquery.flot.spline.js") }}"></script>
+
+    <script src="{{ asset("assets/libraries/bootstrap-select/bootstrap-select.min.js") }}"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing"></script>
+    <script src="{{ asset("assets/dist/modules/datatables/datatables.min.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js") }}"></script>
+    <script src="{{ asset("assets/libraries/jquery-google-map/infobox.js") }}"></script>
+    <script src="{{ asset("assets/libraries/jquery-google-map/markerclusterer.js") }}"></script>
+    <script src="{{ asset("assets/libraries/jquery-google-map/jquery-google-map.js") }}"></script>
+    <script src="{{ asset("assets/dist/modules/chart.js/Chart.min.js") }}"></script>
+    <script src="{{ asset("assets/libraries/owl.carousel/owl.carousel.js") }}"></script>
+    <script src="{{ asset("assets/libraries/bootstrap-fileinput/fileinput.min.js") }}"></script>
+
+    <script src="{{ asset("assets/js/superlist.js") }}"></script>
+    <script>
+        $("#table-1").dataTable({
+            {% if app.request.getLocale() == 'ar' %}
+            "language": {
+                "url": "{{ asset("assets/dist/json/Arabic.json") }}"
+            },
+            {% endif %}
+
+            "columnDefs": [
+                { "sortable": true }
+            ]
+        });
+
+        $(".alert").fadeTo(9000, 500).slideUp(500, function(){
+            $(".alert").slideUp(500);
+        });
+    </script>
+{% endblock %}
+
+</body>
+
+</html>
