@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 23 jan. 2020 à 22:17
+-- Généré le :  jeu. 23 jan. 2020 à 22:47
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.4
 
@@ -55,7 +55,7 @@ CREATE TABLE `fos_user` (
 
 INSERT INTO `fos_user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `nom`, `prenom`, `adresse`, `phone`, `image`, `role`) VALUES
 (1, 'operateur1', 'operateur1', 'operateur1@operateur1.com', 'operateur1@operateur1.com', 1, 'LhfSR39gDQ', '$2y$13$aiKcLe5u87ELkbnqSrYfjOMvZRXeEC3tY8ZtdH2XRII8B83hLI7P.', '2020-01-23 22:13:36', NULL, NULL, 'a:1:{i:0;s:14:\"ROLE_OPERATEUR\";}', 'ARBOUH', 'YOUNESS', '36, rue imam al boukhari maarif', '0696318051', NULL, 3),
-(2, 'controleur1', 'controleur1', 'controleur1@controleur1.com', 'controleur1@controleur1.com', 1, 'LhfSR39gDQ', '$2y$13$aiKcLe5u87ELkbnqSrYfjOMvZRXeEC3tY8ZtdH2XRII8B83hLI7P.', '2020-01-23 22:01:11', NULL, NULL, 'a:1:{i:0;s:15:\"ROLE_CONTROLEUR\";}', 'ARBOUH', 'YOUNESS', '36, rue imam al boukhari maarif', '0696318051', NULL, 3),
+(2, 'controleur1', 'controleur1', 'controleur1@controleur1.com', 'controleur1@controleur1.com', 1, 'LhfSR39gDQ', '$2y$13$aiKcLe5u87ELkbnqSrYfjOMvZRXeEC3tY8ZtdH2XRII8B83hLI7P.', '2020-01-23 22:45:16', NULL, NULL, 'a:1:{i:0;s:15:\"ROLE_CONTROLEUR\";}', 'ARBOUH', 'YOUNESS', '36, rue imam al boukhari maarif', '0696318051', NULL, 3),
 (3, 'operateur2', 'operateur2', 'operateur2@operateur2.com', 'operateur2@operateur2.com', 1, 'LhfSR39gDQ', '$2y$13$aiKcLe5u87ELkbnqSrYfjOMvZRXeEC3tY8ZtdH2XRII8B83hLI7P.', '2020-01-23 22:13:36', NULL, NULL, 'a:1:{i:0;s:14:\"ROLE_OPERATEUR\";}', 'NOM', 'Prenom', '36, rue imam al boukhari maarif', '0696318051', NULL, 3),
 (4, 'controleur2', 'controleur2', 'controleur2@controleur1.com', 'controleur2@controleur1.com', 1, 'LhfSR39gDQ', '$2y$13$aiKcLe5u87ELkbnqSrYfjOMvZRXeEC3tY8ZtdH2XRII8B83hLI7P.', '2020-01-23 22:01:11', NULL, NULL, 'a:1:{i:0;s:15:\"ROLE_CONTROLEUR\";}', 'NOM', 'Prenom', '36, rue imam al boukhari maarif', '0696318051', NULL, 3);
 
@@ -69,7 +69,7 @@ CREATE TABLE `inventaire` (
   `id` int(11) NOT NULL,
   `operateur_id` int(11) DEFAULT NULL,
   `numero` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `etat` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `etat` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `nbr_piece` smallint(6) NOT NULL,
   `nbr_page` smallint(6) NOT NULL,
   `statut` smallint(6) NOT NULL,
@@ -82,8 +82,8 @@ CREATE TABLE `inventaire` (
 --
 
 INSERT INTO `inventaire` (`id`, `operateur_id`, `numero`, `etat`, `nbr_piece`, `nbr_page`, `statut`, `commetaire`, `created`) VALUES
-(1, 3, 'num1', 'In l', 0, 0, 0, NULL, '2020-01-22 22:57:12'),
-(2, 1, 'num2', 'In l', 5, 4, 1, NULL, '2020-01-22 23:09:22');
+(1, 3, 'num1', 'Etat 1', 0, 0, 2, NULL, '2020-01-22 22:57:12'),
+(2, 1, 'num2', 'Etat 2', 5, 4, 1, NULL, '2020-01-22 23:09:22');
 
 --
 -- Index pour les tables déchargées

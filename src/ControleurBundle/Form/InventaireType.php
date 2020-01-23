@@ -18,7 +18,12 @@ class InventaireType extends AbstractType
     {
         $builder
             ->add('numero', TextType::class, array('label' => 'N° Dossier *'))
-            ->add('etat', TextType::class, array('label' => 'Etat du dossier *'))
+            ->add('etat', ChoiceType::class, array('label' => 'Etat du dossier *',
+                'choices' => [
+                    'Etat 1' => 'Etat 1',
+                    'Etat 2' => 'Etat 2',
+                    'Etat 3' => 'Etat 3',
+                ]))
             ->add('nbrPiece', TextType::class, array('label' => 'Nbre de pièce *'))
             ->add('nbrPage', TextType::class, array('label' => 'Nbre de page *'))
             ->add('statut', ChoiceType::class, [

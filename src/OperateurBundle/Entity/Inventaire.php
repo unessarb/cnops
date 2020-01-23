@@ -38,7 +38,7 @@ class Inventaire
     /**
      * @var string
      *
-     * @ORM\Column(name="etat", type="string", length=4)
+     * @ORM\Column(name="etat", type="string", length=20)
      */
     private $etat;
 

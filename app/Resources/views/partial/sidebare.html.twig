@@ -13,13 +13,13 @@
         <div class="title">
             <h1 class="h4">{{ app.user.nom }} {{ app.user.prenom }} </h1>
             <p>
-            {% if(app.user.role == 3) %}
+            {% if is_granted('ROLE_OPERATEUR') %}
 
                 Opérateur
 
-             {% elseif(app.user.role == 2) %}
+             {% elseif is_granted('ROLE_CONTROLEUR') %}
 
-                Controleur
+                Contrôleur
             {% else %}
              Administrateur
 
