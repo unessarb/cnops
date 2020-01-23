@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block header_title %}
-    Mes inventaires
+    Les inventaires
 {% endblock %}
 
 {% block main_content %}
@@ -16,10 +16,7 @@
             <div class="row bg-white has-shadow">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <a class="btn btn-primary" href="{{ path('ajouter_inventaire') }}"><i
-                                        class="fa fa-plus-circle"></i>&ensp;Nouveau inventaire</a>
-                        </div>
+
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped" id="table-1">
@@ -47,7 +44,7 @@
                                             <td>{{ inventaire.etat }}</td>
                                             <td>{{ inventaire.nbrPiece }}</td>
                                             <td>{{ inventaire.nbrPage }}</td>
-                                            <td>{{ inventaire.created | date("d/m/Y")  }}</td>
+                                            <td>{{ inventaire.created | date("d/m/Y") }}</td>
 
                                             <td>
                                                 {% if inventaire.statut == 0 %}
@@ -55,18 +52,18 @@
                                                 {% elseif inventaire.statut == 1 %}
                                                     <div class="badge badge-rounded bg-green">Conforme      </div>
                                                 {% elseif inventaire.statut == 2%}
-                                                    <div class="badge badge-rounded bg-orange">Non conforme      </div>
+                                                <div class="badge badge-rounded bg-orange">Non conforme      </div>
                                                 {% endif %}
-                                            </td>
 
+                                            </td>
                                             <td>{{ inventaire.commetaire?inventaire.commetaire:'N/A' }}</td>
 
 
                                             <td>
-                                                <a href="{{ path('edit_inventaire', { 'id': inventaire.id }) }}"
+                                                <a href="{{ path('edit_inventaires', { 'id': inventaire.id }) }}"
                                                    data-toggle="tooltip" title="Modifier"
                                                    class="btn btn-icon btn-primary"><i class="fa fa-edit"></i></a>
-                                                <a href="{{ path('supprimer_inventaire', { 'id': inventaire.id }) }}"
+                                                <a href="{{ path('supprimer_inventaires', { 'id': inventaire.id }) }}"
                                                    data-toggle="tooltip" title="Supprimer"
                                                    class="btn btn-icon btn-danger"><i class="fa fa-times"></i></a>
 

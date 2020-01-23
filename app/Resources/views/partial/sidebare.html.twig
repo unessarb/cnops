@@ -51,10 +51,12 @@
 
         {% if is_granted('ROLE_CONTROLEUR') %}
 
-            <li id="MD"><a class="nav-link" href="#"><i class="fa fa-inbox"></i> <span>{{ 'demandes'|trans({}, 'sidebar')}}</span></a></li>
+            <li id="IN"><a class="nav-link" href="{{ path('inventaires') }}"><i class="fa fa-inbox"></i> <span>Inventaires</span></a></li>
 
 
         {% endif %}
+
+
         <li id="MD"><a class="nav-link" href="{{ path('fos_user_change_password') }}"><i class="fa fa-square-o"></i> <span>{{ 'passwordchange'|trans({}, 'sidebar')}}</span></a></li>
 
 

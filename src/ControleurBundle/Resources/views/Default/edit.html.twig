@@ -49,6 +49,23 @@
 
                 </div>
                 <div class="row">
+
+                    <div class="col-6">
+
+                        {{ form_label (form.statut) }}
+                        {{ form_widget(form.statut, {'attr' : {'class' : 'categorieclass span3'}}) }}
+                        {{ form_errors(form.statut) }}
+                    </div>
+
+                    <div class="col-6">
+
+                        {{ form_label (form.commetaire,'Commentaire') }}
+                        {{ form_widget(form.commetaire, {'attr' : {'class' : 'varieteclass span3'}}) }}
+                        {{ form_errors(form.commetaire) }}
+                    </div>
+
+                </div>
+                <div class="row">
                     <div class="col-12">
                         <input id="btn" type="submit" class="btn btn-primary" value="Enregistrer"/>
 
@@ -74,7 +91,6 @@
             $("li").removeClass("active");
             $("#GD").addClass("active");
         };
-
 
 
     </script>

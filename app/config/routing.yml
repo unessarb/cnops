@@ -1,3 +1,8 @@
+controleur:
+    resource: "@ControleurBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 operateur:
     resource: "@OperateurBundle/Controller/"
     type:     annotation
